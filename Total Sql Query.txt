@@ -1,0 +1,11 @@
+// Виводить назву Парку з відвідувачами менше 1000000.
+SELECT  name  FROM park WHERE park_visitors < 1000000;
+
+// Вивести унікальні міста.
+SELECT COUNT(DISTINCT city) FROM park
+
+// Вивести суму відвідувачів парків у Сан Франциско.
+SELECT SUM(park_visitors) FROM park WHERE city LIKE 'San Francisco'
+
+// Вивести топ 5 парків по кількості відвідувачів.
+SELECT name, park_visitors as total FROM park ORDER BY park_visitors DESC LIMIT 5
